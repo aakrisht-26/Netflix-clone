@@ -1,0 +1,168 @@
+/* --- GENERAL --- */
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #141414;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  background-color: #141414;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  color: #e50914;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+nav a, nav select {
+  margin-left: 1.5em;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* --- DROPDOWN UPDATE --- */
+nav select {
+  background-color: #222;   /* Dark background */
+  color: white;             /* Text color */
+  padding: 0.3em 0.5em;
+  border-radius: 5px;
+  border: 1px solid #555;
+}
+
+nav select option {
+  background-color: #222;   /* Dark background for options */
+  color: white;             /* Text color */
+}
+
+/* --- MOVIE GRID --- */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  padding: 2em;
+}
+
+.movie-card {
+  position: relative;
+  background-color: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px rgba(229,9,20,0.4);
+}
+
+/* Thumbnail and preview video layered */
+.movie-card img,
+.movie-card video {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-card video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.movie-card:hover video {
+  opacity: 1;
+}
+
+/* --- INFO --- */
+.movie-info {
+  padding: 1em;
+  z-index: 2;
+  position: relative;
+}
+
+.movie-info h3 {
+  margin: 0;
+  color: #fff;
+}
+
+.movie-info p {
+  margin: 0.3em 0;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 1em 1em;
+  z-index: 2;
+  position: relative;
+}
+
+button {
+  background-color: #e50914;
+  border: none;
+  color: white;
+  padding: 0.4em 0.8em;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+button:hover {
+  background-color: #b00610;
+}
+
+/* --- LOGIN PAGE --- */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.8), #000), url('thumbnails/bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.login-container {
+  text-align: center;
+}
+
+.login-box {
+  background: rgba(20,20,20,0.9);
+  padding: 2em;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.login-box input {
+  display: block;
+  margin: 1em auto;
+  padding: 0.8em;
+  width: 80%;
+  border-radius: 5px;
+  border: none;
+}
+
+.guest-btn {
+  background-color: #333;
+}

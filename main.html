@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiniFlix - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 class="logo">MiniFlix</h1>
+    <nav>
+      <select id="genreSelect" onchange="filterByGenre()">
+        <option value="all">All Genres</option>
+        <option value="Action">Action</option>
+        <option value="Sci-Fi">Sci-Fi</option>
+        <option value="Thriller">Thriller</option>
+        <option value="Drama">Drama</option>
+      </select>
+
+      <select id="sortSelect" onchange="sortMovies()">
+        <option value="rating">Sort by Rating</option>
+        <option value="year">Sort by Year</option>
+      </select>
+
+      <a href="watchlist.html">Watchlist</a>
+      <a href="liked.html">Liked</a>
+      <a href="index.html" onclick="logout()">Logout</a>
+    </nav>
+  </header>
+
+  <main id="movieContainer" class="movie-grid"></main>
+
+  <script src="script.js"></script>
+</body>
+</html>
