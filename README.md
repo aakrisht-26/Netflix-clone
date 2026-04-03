@@ -1,5 +1,5 @@
 Netflix 🎬 Miniflix (AWS Netflix Clone)
-
+ 
 Miniflix is a Netflix-inspired mini streaming platform deployed on AWS to demonstrate
 cloud deployment, storage, and content delivery concepts.
 
